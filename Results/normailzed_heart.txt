@@ -1,0 +1,52 @@
+linear:
+[[25  6]
+ [11 34]]
+              precision    recall  f1-score   support
+
+           0       0.69      0.81      0.75        31
+           1       0.85      0.76      0.80        45
+
+    accuracy                           0.78        76
+   macro avg       0.77      0.78      0.77        76
+weighted avg       0.79      0.78      0.78        76
+Accuracy:77.63157894736842%
+
+poly:
+[[22  9]
+ [ 9 36]]
+              precision    recall  f1-score   support
+
+           0       0.71      0.71      0.71        31
+           1       0.80      0.80      0.80        45
+
+    accuracy                           0.76        76
+   macro avg       0.75      0.75      0.75        76
+weighted avg       0.76      0.76      0.76        76
+Accuracy:76.31578947368422%
+
+sigmoid:
+[[23  8]
+ [ 9 36]]
+              precision    recall  f1-score   support
+
+           0       0.72      0.74      0.73        31
+           1       0.82      0.80      0.81        45
+
+    accuracy                           0.78        76
+   macro avg       0.77      0.77      0.77        76
+weighted avg       0.78      0.78      0.78        76
+Accuracy:77.63157894736842%
+
+rbf:
+[[25  6]
+ [13 32]]
+              precision    recall  f1-score   support
+
+           0       0.66      0.81      0.72        31
+           1       0.84      0.71      0.77        45
+
+    accuracy                           0.75        76
+   macro avg       0.75      0.76      0.75        76
+weighted avg       0.77      0.75      0.75        76
+Accuracy:75.0%
+
