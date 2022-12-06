@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 cur_dir = os.getcwd()
 
 # Import the dataset
-df = pd.read_csv(os.path.join(cur_dir, '../../Datasets/normalized_heart.csv'), header=0)
+df = pd.read_csv(os.path.join(cur_dir, '../../Datasets/normalized_heart_slimmed.csv'), header=0)
 
 # split into x, y
 X, y = df.drop("output", axis=1), df["output"]

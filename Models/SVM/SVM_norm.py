@@ -10,11 +10,11 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 cur_dir = os.getcwd()
 
 # Import the dataset
-df = pd.read_csv(os.path.join(cur_dir, '../../Datasets/normalized_banknote.csv'), header=None)
+df = pd.read_csv(os.path.join(cur_dir, '../../Datasets/normalized_heart_slimmed.csv'), header=0)
 print(df.shape)
 
 # split into x, y
-X, y = df.drop(4, axis=1), df[4]
+X, y = df.drop("output", axis=1), df["output"]
 
 # Train/test split for model development
 X_train, X_test, y_train, y_test = train_test_split(X, y)
@@ -23,7 +23,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y)
 kernels = ['linear', 'poly', 'sigmoid', 'rbf']
 
 # Open the output file 
-f = open(os.path.join(cur_dir, '../../Results/normailzed_banknote.txt'), 'w')
+f = open(os.path.join(cur_dir, '../../Results/normalized_heart_slimmed.txt'), 'w')
 
 for kernel in kernels:
     svc_classifier = SVC(kernel=kernel)
