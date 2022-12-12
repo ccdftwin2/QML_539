@@ -29,7 +29,7 @@ y_scaled = 2 * (y - 0.5)
 print("Unique labels:", np.unique(y_scaled))
 
 # Train/test split for model development
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y_scaled)
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y_scaled, random_state=42, test_size=0.3)
 
 # Embed the data. First define the number of qubits
 n_qubits = len(X_scaled[0])
@@ -74,5 +74,12 @@ f.write(str(classification_report(y_test, prediction)))
 f.write("Accuracy:" + str(accuracy_score(y_test, prediction)*100) + "%\n\n")
 f.write("Training Time: " + str(train_time) + "\n")
 f.write("Prediction Time: " + str(predict_time) + "\n")
+cm = confusion_matrix(y_test,prediction)
+from sklearn.metrics import confusion_matrix,ConfusionMatrixDisplay
+disp = ConfusionMatrixDisplay(confusion_matrix=cm,
+                              display_labels=[-1,1])
+disp.plot()
+disp.im_.set_clim(0, 45)
+plt.savefig("../../Results/Confusion_Matrix_" + "lin_qsvm" + "_heart.png")
 f.close()
 

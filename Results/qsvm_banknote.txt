@@ -1,14 +1,14 @@
-[[178   0]
- [  0 165]]
+[[229   0]
+ [  0 183]]
               precision    recall  f1-score   support
 
-        -1.0       1.00      1.00      1.00       178
-         1.0       1.00      1.00      1.00       165
+        -1.0       1.00      1.00      1.00       229
+         1.0       1.00      1.00      1.00       183
 
-    accuracy                           1.00       343
-   macro avg       1.00      1.00      1.00       343
-weighted avg       1.00      1.00      1.00       343
+    accuracy                           1.00       412
+   macro avg       1.00      1.00      1.00       412
+weighted avg       1.00      1.00      1.00       412
 Accuracy:100.0%
 
-Training Time: 2777.5389955043793
-Prediction Time: 922.2597589492798
+Training Time: 3777.8309695720673
+Prediction Time: 1323.6457872390747
